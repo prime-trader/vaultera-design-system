@@ -78,3 +78,19 @@ export const Primary: Story = {
     return <TextField {...args} />;
   },
 };
+export const Error: Story = {
+  args: {
+    errorMsg: "This can't be empty.",
+  },
+  render: (args) => {
+    return <TextField {...args} />;
+  },
+};
+export const WithIcon: Story = {
+  args: {
+    icon: <FaBeer color="#fff" />,
+  },
+  render: (args) => {
+    return <TextField {...args} />;
+  },
+};
