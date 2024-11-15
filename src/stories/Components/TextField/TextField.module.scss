@@ -1,0 +1,72 @@
+.TextFieldWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  .lbl {
+    color: var(--White-white, #fff);
+    text-align: left;
+
+    /* Body-1/Medium */
+    font-family: Gilroy-Medium;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+
+  .TextFieldCon {
+    display: flex;
+    height: 40px;
+    padding: 13px 16px;
+    align-items: center;
+    gap: 17px;
+    align-self: stretch;
+    border-radius: 12px;
+    border: 1px solid rgba(111, 111, 111, 0.25);
+    transition: all 500ms ease-in-out;
+    input {
+      color: var(--White-white, #fff);
+
+      /* Body-2/Semi-bold */
+      font-family: Gilroy-SemiBold;
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 100%; /* 14px */
+      border: none;
+      background: transparent;
+      outline: none;
+    }
+    input::placeholder {
+      color: var(--White-white_50, rgba(255, 255, 255, 0.5));
+
+      /* Body-2/Semi-bold */
+      font-family: Gilroy-SemiBold;
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 100%; /* 14px */
+    }
+  }
+  .focused {
+    border: 1px solid var(--purple-purple, #d376ff);
+    background: var(--White-white_5, rgba(255, 255, 255, 0.05));
+    box-shadow: 0px 0px 15px 0px rgba(211, 118, 255, 0.07);
+  }
+  .error {
+    // border-radius: 12px;
+    border: 1px solid var(--danger-red_danger, #ff5e5e);
+    background: var(--White-white_5, rgba(255, 255, 255, 0.05));
+  }
+  .errorMsg {
+    color: var(--danger-red_danger, #ff5e5e);
+    text-align: left;
+
+    /* Body-2/medium */
+    font-family: Gilroy-Medium;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 100%; /* 14px */
+  }
+}
