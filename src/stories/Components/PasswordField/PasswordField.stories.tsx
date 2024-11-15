@@ -12,8 +12,6 @@ const meta: Meta<StoryProps> = {
     layout: "centered",
   },
   argTypes: {
-  
-  
     value: {
       control: {
         type: "text",
@@ -25,7 +23,6 @@ const meta: Meta<StoryProps> = {
         type: "select",
       },
     },
-  
   },
   args: {
     onChange: fn(),

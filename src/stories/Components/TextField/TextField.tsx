@@ -1,15 +1,17 @@
-import React, { useState } from "react";
+import React, { LegacyRef, useState } from "react";
 import clsx from "clsx"; // For conditional class names
 import style from "./TextField.module.scss";
 import "../../../index.css";
 
 type TextFieldProps = {
+  id?: string;
+  textFieldRef?: LegacyRef<HTMLInputElement> ;
   label?: string;
   required?: boolean;
-  placeHolder?: string;
+  placeholder?: string;
 
-  value: string | number;
-  onChange: (e: string | number) => void;
+  value: string;
+  onChange: (e: string) => void;
 
   disabled?: boolean;
   variant?: "text" | "number" | "password";
@@ -18,15 +20,16 @@ type TextFieldProps = {
   minHeight?: "81px" | "max-content" | string;
 
   icon?: React.ReactNode;
-  onIconclick: () => void;
+  onIconClick: () => void;
 
   errorMsg?: string | undefined | null;
 };
 
 const TextField: React.FC<TextFieldProps> = ({
+  id,
   label,
   required = false,
-  placeHolder = "Hi, i am input",
+  placeholder = "Hi, i am input",
   value = "",
   onChange,
   disabled = false,
@@ -34,8 +37,9 @@ const TextField: React.FC<TextFieldProps> = ({
   size = "450px",
   minHeight = "81px",
   icon,
-  onIconclick,
+  onIconClick,
   errorMsg,
+  textFieldRef
 }) => {
   const errorId = errorMsg ? "error-msg" : undefined;
   const [isFocused, setIsFocused] = useState(false);
@@ -56,22 +60,23 @@ const TextField: React.FC<TextFieldProps> = ({
         })}
       >
         <input
-          id={label}
+          id={id ?? label}
+          ref={textFieldRef}
           type={variant}
           value={value}
           required={required}
-          placeholder={placeHolder}
+          placeholder={placeholder}
           disabled={disabled}
           onFocus={() => setIsFocused(true)} // Set focus state
           onBlur={() => setIsFocused(false)}
-          onChange={(e) => onChange(e.target.value)}
+          onChange={(e) => onChange(e.target.value.toString())}
           aria-invalid={!!errorMsg}
           aria-describedby={errorId}
         />
         {icon && (
           <span
             className={style.icon}
-            onClick={onIconclick}
+            onClick={onIconClick}
             role="button"
             tabIndex={0}
             aria-label="icon"

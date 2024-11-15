@@ -1,14 +1,11 @@
-import React, { useState, ComponentProps } from "react";
-import clsx from "clsx"; // For conditional class names
+import React, { useState, ComponentProps, useRef, useEffect } from "react";
+import clsx from "clsx"; // Conditional class names
 import style from "./PasswordField.module.scss";
 import TextField from "../TextField/TextField";
 import "../../../index.css";
 
 type TextFieldProps = ComponentProps<typeof TextField>;
-type PasswordProps = {
-  
-};
-type PasswordFieldProps = TextFieldProps & PasswordProps;
+type PasswordFieldProps = TextFieldProps;
 
 const PasswordField: React.FC<PasswordFieldProps> = ({
   value = "",
@@ -18,26 +15,115 @@ const PasswordField: React.FC<PasswordFieldProps> = ({
   const [showPwd, setShowPwd] = useState(false);
   const [isPwdCorrect, setIsPwdCorrect] = useState(false);
 
+  const validatePassword = (password: string) => {
+    const isValid =
+      password.length >= 8 &&
+      /[a-z]/.test(password) &&
+      /[A-Z]/.test(password) &&
+      /[^a-zA-Z0-9\s]/.test(password);
+    setIsPwdCorrect(isValid);
+  };
+  useEffect(() => {
+    validatePassword(value);
+  }, [value]);
+  const [isFocused, setIsFocused] = useState(false); // Track focus state
+  const textFieldRef = useRef<HTMLInputElement | null>(null); // Ref for the TextField
+
+  useEffect(() => {
+    const handleFocus = () => setIsFocused(true);
+    const handleBlur = () => setIsFocused(false);
+
+    const textFieldElement = textFieldRef.current;
+    if (textFieldElement) {
+      textFieldElement.addEventListener("focus", handleFocus);
+      textFieldElement.addEventListener("blur", handleBlur);
+    }
+
+    return () => {
+      if (textFieldElement) {
+        textFieldElement.removeEventListener("focus", handleFocus);
+        textFieldElement.removeEventListener("blur", handleBlur);
+      }
+    };
+  }, []);
   return (
-    <div className={style.passwordFieldCon}>
+    <div
+      className={clsx(style.passwordFieldCon, { [style.focused]: isFocused })}
+    >
       <TextField
-        label={"Password"}
-        required={true}
-        placeHolder="Enter your passowrd"
+        textFieldRef={textFieldRef}
+        label="Password"
+        required
+        placeholder="Enter your password"
         value={value}
         onChange={onChange}
         disabled={false}
-        variant={showPwd ? "password" : "text"}
+        variant={showPwd ? "text" : "password"}
         size={size}
         minHeight="65px"
         icon={showPwd ? <PasswordShowIcon /> : <PasswordHideIcon />}
-        onIconclick={() => setShowPwd((prev) => !prev)}
+        onIconClick={() => setShowPwd((prev) => !prev)}
       />
+      <PasswordErrorBox value={value} isPwdCorrect={isPwdCorrect} />
     </div>
   );
 };
+
 export default PasswordField;
 
+const PasswordErrorBox = ({
+  value,
+  isPwdCorrect,
+}: {
+  value: string;
+  isPwdCorrect: boolean;
+}) => (
+  <div
+    className={clsx(style.passwordErrorBox, {
+      [style.passwordCorrect]: isPwdCorrect,
+    })}
+  >
+    <div className={style.title}>
+      <label>Password must</label>
+    </div>
+    <div className={style.listofErrors}>
+      <ErrorItem
+        isValid={value.length >= 8}
+        text="be at least 8 characters long."
+      />
+      <ErrorItem
+        isValid={/[a-z]/.test(value)}
+        text="contain at least one lower case"
+      />
+      <ErrorItem
+        isValid={/[A-Z]/.test(value)}
+        text="contain at least one upper case"
+      />
+      <ErrorItem
+        isValid={/[^a-zA-Z0-9\s]/.test(value)}
+        text="contain at least one special character"
+      />
+    </div>
+  </div>
+);
+
+const ErrorItem = ({ isValid, text }: { isValid: boolean; text: string }) => (
+  <div className={clsx(style.row, { [style.valid]: isValid })}>
+    <RedDot isValid={isValid} /> <label>{text}</label>
+  </div>
+);
+
+const RedDot = ({ isValid }: { isValid: boolean }) => (
+  <svg
+    width="9"
+    height="9"
+    viewBox="0 0 9 9"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <circle cx="4.5" cy="4.5" r="4" fill={isValid ? "#28a745" : "#FF5E5E"} />
+  </svg>
+);
 const PasswordShowIcon = () => {
   return (
     <svg

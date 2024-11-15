@@ -19,7 +19,21 @@
   font-family: "Gilroy-Medium";
   src: url("./assets/fonts/gilroy/Gilroy-Medium.ttf") format("truetype");
 }
+
+
 @font-face {
-  font-family: "Gilroy-Light";
+  font-family: "Roboto-Light";
   src: url("./assets/fonts/gilroy/Gilroy-Light.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Roboto";
+  src: url("./assets/fonts/gilroy/Gilroy-Regular.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Roboto-Bold";
+  src: url("./assets/fonts/gilroy/Gilroy-Bold.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Roboto-Medium";
+  src: url("./assets/fonts/gilroy/Gilroy-Medium.ttf") format("truetype");
 }

@@ -22,7 +22,7 @@ const meta: Meta<StoryProps> = {
         type: "boolean",
       },
     },
-    placeHolder: {
+    placeholder: {
       control: {
         type: "text",
       },
@@ -63,7 +63,7 @@ const meta: Meta<StoryProps> = {
   },
   args: {
     onChange: fn(),
-    onIconclick: fn(),
+    onIconClick: fn(),
     label: "Hi",
   },
 };
