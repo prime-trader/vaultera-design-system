@@ -37,3 +37,32 @@
   font-family: "Roboto-Medium";
   src: url("./assets/fonts/gilroy/Gilroy-Medium.ttf") format("truetype");
 }
+/* Webkit-based browsers (Chrome, Edge, Safari) */
+::-webkit-scrollbar {
+  width: 4px; /* Scrollbar width */
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(137, 137, 234, 0.03); /* Light purple background */
+  border-radius: 2px; /* Rounded edges */
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.1); /* White thumb */
+  border-radius: 2px; /* Rounded edges */
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.2); /* Slightly darker thumb on hover */
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}

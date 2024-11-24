@@ -7,19 +7,17 @@ const meta: Meta<StoryProps> = {
   component: FollowingStatus,
   tags: ["autodocs"],
   parameters: {
-    layout: 'centered',
+    layout: "centered",
   },
   argTypes: {
-    label: {
+    varient: {
+      options: ["following", "resend", "not-following"],
       control: {
-        type: "text",
+        type: "select",
       },
     },
-  
   },
-  args: {
-  
-  },
+  args: {},
 };
 
 export default meta;

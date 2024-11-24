@@ -1,5 +1,7 @@
 import React from "react";
 import style from "./FollowingStatus.module.scss";
+import "../../../index.css";
+
 type Props = {
   varient: string;
 };
