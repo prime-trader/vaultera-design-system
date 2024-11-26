@@ -11,9 +11,15 @@ const meta: Meta<StoryProps> = {
   },
   argTypes: {
     varient: {
-      options: ["following", "resend", "not-following"],
+      options: ["Google", "X", "Telegram", "MetaMask"],
       control: {
         type: "select",
+      },
+    },
+    isDisable: {
+     
+      control: {
+        type:"boolean",
       },
     },
   },
@@ -24,8 +30,35 @@ export default meta;
 
 type Story = StoryObj<StoryProps>;
 
-export const Primary: Story = {
-  args: {},
+export const Google: Story = {
+  args: {
+    varient: "Google",
+  },
+  render: (args) => {
+    return <LoginSocialBtn {...args} />;
+  },
+};
+export const X: Story = {
+  args: {
+    varient: "X",
+  },
+  render: (args) => {
+    return <LoginSocialBtn {...args} />;
+  },
+};
+
+export const Telegram: Story = {
+  args: {
+    varient: "Telegram",
+  },
+  render: (args) => {
+    return <LoginSocialBtn {...args} />;
+  },
+};
+export const MetaMask: Story = {
+  args: {
+    varient: "MetaMask",
+  },
   render: (args) => {
     return <LoginSocialBtn {...args} />;
   },

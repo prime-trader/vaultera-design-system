@@ -24,7 +24,7 @@ const DropdownButton = forwardRef<HTMLDivElement, DropdownButtonProps>(
       >
         <div onClick={toggle} className={style.leftSide}>
           <img
-            src={`/countries/${selectedItem.imgPath}`}
+            src={`${selectedItem.imgPath}`}
             className={style.itemImg}
           />
           <span className={style.itemSpan}>{selectedItem.phoneCode}</span>

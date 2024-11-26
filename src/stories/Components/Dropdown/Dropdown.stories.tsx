@@ -18,7 +18,7 @@ const meta: Meta<StoryProps> = {
   
   },
   args: {
-    buttonText:"Heelo"
+    buttonText:"Hello"
   },
 };
 

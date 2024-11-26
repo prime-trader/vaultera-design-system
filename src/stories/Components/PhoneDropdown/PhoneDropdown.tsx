@@ -1,4 +1,4 @@
-import { useEffect, useState, useRef } from "react";
+import React, { useEffect, useState, useRef } from "react";
 
 import DropdownButton from "./component/DropdownButton";
 import DropdownContent from "./component/DropdownContent";
@@ -8,17 +8,37 @@ import style from "./PhoneDropdown.module.scss";
 import DropdownItem from "./component/DropdownItem";
 
 // Define prop types
-interface DropdownProps {
- 
-}
-
-const PhoneDropdown: React.FC<DropdownProps> = ({  }) => {
+interface DropdownProps {}
+declare const require: {
+  context: (
+    directory: string,
+    useSubdirectories: boolean,
+    regExp: RegExp
+  ) => {
+    keys: () => string[];
+    <T>(id: string): T;
+  };
+};
+type Flags = {
+  [key: string]: string;
+};
+const flagFiles = import.meta.glob("../../assets/countries/*.svg", {
+  eager: true,
+});
+const PhoneDropdown: React.FC<DropdownProps> = ({}) => {
   const [open, setOpen] = useState<boolean>(false);
   const [dropdownTop, setDropdownTop] = useState<number | null>(0);
+
+  const flags: Flags = Object.entries(flagFiles).reduce((acc, [path, module]) => {
+    const countryName = path.split('/').pop() || '';
+    acc[countryName] = (module as { default: string }).default;
+    return acc;
+  }, {} as Flags);
+
   const [selectedItem, setSelectedItem] = useState<Item>({
     countryName: "Spain",
     phoneCode: "+34",
-    imgPath: "spain.svg",
+    imgPath: flags["spain.svg"],
   });
 
   const dropdownRef = useRef<HTMLDivElement | null>(null);
@@ -26,6 +46,11 @@ const PhoneDropdown: React.FC<DropdownProps> = ({  }) => {
   const contentRef = useRef<HTMLDivElement | null>(null);
   const [isInputFocused, setIsInputFocused] = useState<boolean>(false);
 
+  // const flags: Flags  = Object.entries(flagFiles).map(([path, module]) => ({
+  //   [path.split("/").pop() ?? ""]: (module as { default: string }).default, // Use dynamic key generation
+  // }));
+ 
+  console.log(flags);
   const toggleDropdown = () => {
     if (!open) {
       const buttonBottom =
@@ -36,7 +61,7 @@ const PhoneDropdown: React.FC<DropdownProps> = ({  }) => {
       const topPosition =
         spaceRemaining > contentHeight
           ? null
-          : -(contentHeight - spaceRemaining); 
+          : -(contentHeight - spaceRemaining);
       setDropdownTop(topPosition);
     }
 
@@ -52,7 +77,6 @@ const PhoneDropdown: React.FC<DropdownProps> = ({  }) => {
 
   const handleInputBlur = () => {
     setIsInputFocused(false);
-    
   };
   useEffect(() => {
     const handler = (event: MouseEvent) => {
@@ -80,19 +104,23 @@ const PhoneDropdown: React.FC<DropdownProps> = ({  }) => {
         isInputFocused={isInputFocused}
         selectedItem={selectedItem}
       >
-        <input placeholder="Phone" type="number" onFocus={handleInputFocus} // Focus handler
-          onBlur={handleInputBlur}/>
+        <input
+          placeholder="Phone"
+          type="number"
+          onFocus={handleInputFocus} // Focus handler
+          onBlur={handleInputBlur}
+        />
       </DropdownButton>
       <DropdownContent top={dropdownTop} ref={contentRef} open={open}>
         {items.map((item, id) => (
           <DropdownItem
             key={id}
             onClick={() => {
-              setSelectedItem(item);
+              setSelectedItem({...item, imgPath: flags[item.imgPath]});
               toggleDropdown();
             }}
           >
-            <img src={`/countries/${item.imgPath}`} className={style.itemImg} />{" "}
+            <img src={flags[item.imgPath]} className={style.itemImg} />{" "}
             <p className={style.itemP}> {item.countryName}</p>{" "}
             <span className={style.itemSpan}>{item.phoneCode}</span>
           </DropdownItem>

@@ -1,0 +1,181 @@
+.LoginSocialBtn {
+  display: flex;
+  width: 290px;
+  padding: 16px 24px 16px 44px;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  border-radius: 50px;
+  border: 1px solid var(--new_stroke, rgba(111, 111, 111, 0.15));
+  background: var(
+    --background-content_bg-content_bg-5,
+    rgba(137, 137, 234, 0.05)
+  );
+  cursor: pointer;
+  transition: all 500ms;
+  position: relative;
+  overflow: hidden;
+  .plainLogo {
+    display: flex;
+    width: 24px;
+    height: 24px;
+    padding-right: 0.48px;
+    justify-content: space-between;
+    align-items: center;
+    flex-shrink: 0;
+  }
+  label {
+    color: var(--White-white, #fff);
+    text-align: center;
+
+    /* Body-1/Medium */
+    font-family: Gilroy-Medium;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    white-space: nowrap;
+
+    cursor: pointer;
+    width: 100%;
+  }
+  .colorLogo {
+    position: absolute;
+    width: 25px;
+    height: 24px;
+    top: 16px;
+    left: 44px;
+    // visibility: hidden;
+    opacity: 0.2;
+    transition:
+      top 500ms,
+      left 500ms,
+      width 500ms,
+      height 500ms,
+      opacity 700ms;
+    z-index: -1;
+
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+  &:hover {
+    box-shadow: 0px 0px 25px 0px rgba(211, 118, 255, 0.05);
+    border-radius: 50px;
+    border: 1.5px solid var(--new_input_stroke, rgba(111, 111, 111, 0.25));
+    background: var(
+      --content_hover,
+      linear-gradient(
+        233deg,
+        rgba(151, 71, 255, 0) 9.75%,
+        rgba(151, 71, 255, 0.2) 143.56%
+      ),
+      rgba(137, 137, 234, 0.05)
+    );
+    .colorLogo {
+      opacity: 1;
+      left: 208px;
+      width: 109px;
+      height: 107px;
+      top: -22px;
+    }
+  }
+  &:active {
+    border-radius: 50px;
+    border: 1px solid var(--new_stroke, rgba(111, 111, 111, 0.15));
+    background: linear-gradient(
+        127deg,
+        rgba(0, 0, 0, 0) -34.57%,
+        rgba(0, 0, 0, 0.2) 61.59%
+      ),
+      rgba(137, 137, 234, 0.05);
+    .colorLogo {
+      visibility: hidden;
+    }
+  }
+}
+.Telegram {
+  &:hover {
+    border-radius: 50px;
+    border: 2px solid var(--new_input_stroke, rgba(111, 111, 111, 0.25));
+    background: linear-gradient(
+        233deg,
+        rgba(40, 167, 232, 0) 9.75%,
+        rgba(40, 167, 232, 0.2) 143.56%
+      ),
+      rgba(137, 137, 234, 0.05);
+  }
+  &:active {
+    border-radius: 50px;
+    border: 1px solid var(--new_stroke, rgba(111, 111, 111, 0.15));
+    background: linear-gradient(
+        127deg,
+        rgba(0, 0, 0, 0) -34.57%,
+        rgba(0, 0, 0, 0.2) 61.59%
+      ),
+      rgba(137, 137, 234, 0.05);
+  }
+}
+
+.MetaMask {
+  &:hover {
+    border-radius: 50px;
+    border: 2px solid var(--new_input_stroke, rgba(111, 111, 111, 0.25));
+    background: linear-gradient(
+        233deg,
+        rgba(246, 133, 27, 0) 9.75%,
+        rgba(246, 133, 27, 0.2) 143.56%
+      ),
+      rgba(137, 137, 234, 0.05);
+  }
+  &:active {
+    border-radius: 50px;
+    border: 1px solid var(--new_stroke, rgba(111, 111, 111, 0.15));
+    background: linear-gradient(
+        127deg,
+        rgba(0, 0, 0, 0) -34.57%,
+        rgba(0, 0, 0, 0.2) 61.59%
+      ),
+      rgba(137, 137, 234, 0.05);
+  }
+}
+.disable {
+  border-radius: 50px;
+  border: 1px solid var(--new_stroke, rgba(111, 111, 111, 0.15));
+  background: var(
+    --background-content_bg-content_bg_3,
+    rgba(137, 137, 234, 0.03)
+  );
+
+  cursor: not-allowed;
+  label {
+    color: var(--White-white_30, rgba(255, 255, 255, 0.3)) !important;
+    cursor: not-allowed;
+  }
+  svg {
+    opacity: 0.3 !important;
+  }
+  img {
+    opacity: 0.3 !important;
+  }
+  .colorLogo {
+    display: none;
+  }
+  &:hover {
+    box-shadow: none;
+    border: 1px solid var(--new_stroke, rgba(111, 111, 111, 0.15));
+    background: var(
+      --background-content_bg-content_bg_3,
+      rgba(137, 137, 234, 0.03)
+    );
+  }
+
+  &:active {
+    border: 1px solid var(--new_stroke, rgba(111, 111, 111, 0.15));
+    background: var(
+      --background-content_bg-content_bg_3,
+      rgba(137, 137, 234, 0.03)
+    );
+  }
+}

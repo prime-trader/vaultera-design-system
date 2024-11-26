@@ -43,7 +43,7 @@ const meta: Meta<StoryProps> = {
   },
   args: {
     onClick: fn(),
-    label: "Hi",
+    label: "Hello",
   },
 };
 

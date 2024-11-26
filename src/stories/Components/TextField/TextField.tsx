@@ -29,7 +29,7 @@ const TextField: React.FC<TextFieldProps> = ({
   id,
   label,
   required = false,
-  placeholder = "Hi, i am input",
+  placeholder = "I am placeholder...",
   value = "",
   onChange,
   disabled = false,
