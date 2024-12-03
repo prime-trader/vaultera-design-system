@@ -1,4 +1,3 @@
-import React from "react";
 import style from "./LoginSocialBtn.module.scss";
 import "../../../index.css";
 import MetaIcon from "./icons/meta01.png";
