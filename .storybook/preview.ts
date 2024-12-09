@@ -1,5 +1,4 @@
 import type { Preview } from "@storybook/react";
-import { MINIMAL_VIEWPORTS } from "@storybook/addon-viewport";
 
 const kindleViewports = {
   iphone14: {
@@ -35,7 +34,7 @@ const kindleViewports = {
 const preview: Preview = {
   parameters: {
     backgrounds: {
-      default: "dark", // Set the canvas background to dark
+      default: "dark",
     },
     controls: {
       matchers: {

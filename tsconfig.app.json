@@ -22,5 +22,11 @@
     "noFallthroughCasesInSwitch": true,
     "noUncheckedSideEffectImports": true
   },
-  "include": ["src"]
+  "include": ["src"],
+
+  // fix path import for ts, and setup alias
+  "baseUrl": ".",
+  "paths": {
+    "@icons/*": ["src/assets/icons/*"]
+  }
 }

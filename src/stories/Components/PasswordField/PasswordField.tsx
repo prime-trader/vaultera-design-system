@@ -124,6 +124,7 @@ const RedDot = ({ isValid }: { isValid: boolean }) => (
     <circle cx="4.5" cy="4.5" r="4" fill={isValid ? "#28a745" : "#FF5E5E"} />
   </svg>
 );
+
 const PasswordShowIcon = () => {
   return (
     <svg
@@ -162,6 +163,7 @@ const PasswordShowIcon = () => {
     </svg>
   );
 };
+
 const PasswordHideIcon = () => {
   return (
     <svg
