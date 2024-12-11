@@ -10,29 +10,35 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      # Step 1: Check out the repository
+      # Checkout the repository
       - name: Checkout repository
         uses: actions/checkout@v3
         with:
-          submodules: 'recursive'
+          submodules: 'recursive' 
+          token: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
 
-      # Step 2: Set up Node.js environment
+      # Step 2: Initialize and update submodules
+      - name: Initialize and update submodules
+        run: git submodule update --init --recursive
+
+      # Step 3: Set up Node.js environment
       - name: Set up Node.js
         uses: actions/setup-node@v3
         with:
           node-version: '21'
 
-      # Step 3: Install dependencies
+      # Step 4: Install dependencies
       - name: Install dependencies
         run: npm install
 
-      # Step 4: Build Storybook
+      # Step 5: Build Storybook
       - name: Build Storybook
         run: npm run build-storybook
 
-      # Step 5: Deploy to GitHub Pages
+      # Step 6: Deploy to GitHub Pages
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./storybook 
+          publish_dir: ./storybook-static
+          publish_branch: gh-pages
