@@ -14,8 +14,7 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v3
         with:
-          submodules: true
-          token: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
+          submodules: 'recursive'
 
       # Step 2: Set up Node.js environment
       - name: Set up Node.js
