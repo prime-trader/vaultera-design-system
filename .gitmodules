@@ -1,0 +1,3 @@
+[submodule "src/assets/icons"]
+	path = src/assets/icons
+	url = https://github.com/prime-trader/vaultera-ui-icons.git
