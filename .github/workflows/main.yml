@@ -3,7 +3,7 @@ name: Publish Storybook to GitHub Pages
 on:
   push:
     branches:
-      - dev
+      - sandbox
 
 jobs:
   build-and-deploy:
@@ -39,6 +39,6 @@ jobs:
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
+          github_token: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
           publish_dir: ./storybook-static
           publish_branch: gh-pages
