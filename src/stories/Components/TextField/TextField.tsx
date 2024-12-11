@@ -1,48 +1,48 @@
-import React, { LegacyRef, useState } from "react";
-import clsx from "clsx"; // For conditional class names
-import style from "./TextField.module.scss";
-import "../../../index.css";
+import React, { LegacyRef, useState } from 'react'
+import clsx from 'clsx' // For conditional class names
+import style from './TextField.module.scss'
+import '../../../index.css'
 
 type TextFieldProps = {
-  id?: string;
-  textFieldRef?: LegacyRef<HTMLInputElement> ;
-  label?: string;
-  required?: boolean;
-  placeholder?: string;
+  id?: string
+  textFieldRef?: LegacyRef<HTMLInputElement>
+  label?: string
+  required?: boolean
+  placeholder?: string
 
-  value: string;
-  onChange: (e: string) => void;
+  value: string
+  onChange: (e: string) => void
 
-  disabled?: boolean;
-  variant?: "text" | "number" | "password";
+  disabled?: boolean
+  variant?: 'text' | 'number' | 'password'
 
-  size?: "450px" | "100%" | string;
-  minHeight?: "81px" | "max-content" | string;
+  size?: '450px' | '100%' | string
+  minHeight?: '81px' | 'max-content' | string
 
-  icon?: React.ReactNode;
-  onIconClick: () => void;
+  icon?: React.ReactNode
+  onIconClick: () => void
 
-  errorMsg?: string | undefined | null;
-};
+  errorMsg?: string | undefined | null
+}
 
 const TextField: React.FC<TextFieldProps> = ({
   id,
   label,
   required = false,
-  placeholder = "I am placeholder...",
-  value = "",
+  placeholder = 'I am placeholder...',
+  value = '',
   onChange,
   disabled = false,
-  variant = "text",
-  size = "450px",
-  minHeight = "81px",
+  variant = 'text',
+  size = '450px',
+  minHeight = '81px',
   icon,
   onIconClick,
   errorMsg,
   textFieldRef
 }) => {
-  const errorId = errorMsg ? "error-msg" : undefined;
-  const [isFocused, setIsFocused] = useState(false);
+  const errorId = errorMsg ? 'error-msg' : undefined
+  const [isFocused, setIsFocused] = useState(false)
   return (
     <div
       className={clsx(style.TextFieldWrapper, style[variant])}
@@ -56,7 +56,7 @@ const TextField: React.FC<TextFieldProps> = ({
       <div
         className={clsx(style.TextFieldCon, {
           [style.focused]: isFocused,
-          [style.error]: errorMsg,
+          [style.error]: errorMsg
         })}
       >
         <input
@@ -91,6 +91,6 @@ const TextField: React.FC<TextFieldProps> = ({
         </p>
       )}
     </div>
-  );
-};
-export default TextField;
+  )
+}
+export default TextField

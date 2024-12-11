@@ -1,32 +1,32 @@
-import { ComponentProps } from "react";
-import FollowingStatus from "./FollowingStatus";
-import { Meta, StoryObj } from "@storybook/react";
-type StoryProps = ComponentProps<typeof FollowingStatus>;
+import { ComponentProps } from 'react'
+import FollowingStatus from './FollowingStatus'
+import { Meta, StoryObj } from '@storybook/react'
+type StoryProps = ComponentProps<typeof FollowingStatus>
 
 const meta: Meta<StoryProps> = {
   component: FollowingStatus,
-  tags: ["autodocs"],
+  tags: ['autodocs'],
   parameters: {
-    layout: "centered",
+    layout: 'centered'
   },
   argTypes: {
     varient: {
-      options: ["following", "resend", "not-following"],
+      options: ['following', 'resend', 'not-following'],
       control: {
-        type: "select",
-      },
-    },
+        type: 'select'
+      }
+    }
   },
-  args: {},
-};
+  args: {}
+}
 
-export default meta;
+export default meta
 
-type Story = StoryObj<StoryProps>;
+type Story = StoryObj<StoryProps>
 
 export const Primary: Story = {
   args: {},
   render: (args) => {
-    return <FollowingStatus {...args} />;
-  },
-};
+    return <FollowingStatus {...args} />
+  }
+}

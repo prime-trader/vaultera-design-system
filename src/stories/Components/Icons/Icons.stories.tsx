@@ -1,16 +1,16 @@
-import IconViewer from "./IconViewer";
+import IconViewer from './IconViewer'
 
 export default {
-  title: "Icons/Explorer",
+  title: 'Icons/Explorer',
   component: IconViewer,
   parameters: {
     controls: {
-      exclude: /.*/g,
+      exclude: /.*/g
     },
     docs: {
-      toolbar: { showPanel: false },
-    },
-  },
-};
+      toolbar: { showPanel: false }
+    }
+  }
+}
 
-export const Default = () => <IconViewer />;
+export const Default = () => <IconViewer />

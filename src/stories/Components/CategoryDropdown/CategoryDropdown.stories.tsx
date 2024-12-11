@@ -1,43 +1,42 @@
-import { ComponentProps } from "react";
-import CategoryDropdown from "./CategoryDropdown";
-import { Meta, StoryObj } from "@storybook/react";
-type StoryProps = ComponentProps<typeof CategoryDropdown>;
+import { ComponentProps } from 'react'
+import CategoryDropdown from './CategoryDropdown'
+import { Meta, StoryObj } from '@storybook/react'
+type StoryProps = ComponentProps<typeof CategoryDropdown>
 
 const meta: Meta<StoryProps> = {
   component: CategoryDropdown,
-  tags: ["autodocs"],
+  tags: ['autodocs'],
   parameters: {
-    layout: "centered",
+    layout: 'centered'
   },
   argTypes: {
     varient: {
-      options: ["category", "filter"],
+      options: ['category', 'filter'],
       control: {
-        type: "select",
-      },
-    },
+        type: 'select'
+      }
+    }
   },
-  args: {},
-};
+  args: {}
+}
 
-export default meta;
+export default meta
 
-type Story = StoryObj<StoryProps>;
+type Story = StoryObj<StoryProps>
 
 export const Category: Story = {
   args: {
-    varient:"category"
+    varient: 'category'
   },
   render: (args) => {
-    return <CategoryDropdown {...args} />;
-  },
-};
+    return <CategoryDropdown {...args} />
+  }
+}
 export const Filter: Story = {
   args: {
-    varient:"filter"
-
+    varient: 'filter'
   },
   render: (args) => {
-    return <CategoryDropdown {...args} />;
-  },
-};
+    return <CategoryDropdown {...args} />
+  }
+}

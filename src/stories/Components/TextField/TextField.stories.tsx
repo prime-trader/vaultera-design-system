@@ -1,96 +1,96 @@
-import { ComponentProps } from "react";
-import TextField from "./TextField";
-import { Meta, StoryObj } from "@storybook/react";
-import { fn } from "@storybook/test";
-import { FaBeer } from "react-icons/fa";
-type StoryProps = ComponentProps<typeof TextField>;
+import { ComponentProps } from 'react'
+import TextField from './TextField'
+import { Meta, StoryObj } from '@storybook/react'
+import { fn } from '@storybook/test'
+import { FaBeer } from 'react-icons/fa'
+type StoryProps = ComponentProps<typeof TextField>
 
 const meta: Meta<StoryProps> = {
   component: TextField,
-  tags: ["autodocs"],
+  tags: ['autodocs'],
   parameters: {
-    layout: "centered",
+    layout: 'centered'
   },
   argTypes: {
     label: {
       control: {
-        type: "text",
-      },
+        type: 'text'
+      }
     },
     required: {
       control: {
-        type: "boolean",
-      },
+        type: 'boolean'
+      }
     },
     placeholder: {
       control: {
-        type: "text",
-      },
+        type: 'text'
+      }
     },
     value: {
       control: {
-        type: "text",
-      },
+        type: 'text'
+      }
     },
     size: {
-      options: ["450px", "100%"],
+      options: ['450px', '100%'],
       control: {
-        type: "select",
-      },
+        type: 'select'
+      }
     },
     minHeight: {
-      options: ["81px", "max-content"],
+      options: ['81px', 'max-content'],
       control: {
-        type: "select",
-      },
+        type: 'select'
+      }
     },
     variant: {
-      options: ["text", "number", "password"],
+      options: ['text', 'number', 'password'],
       control: {
-        type: "select",
-      },
+        type: 'select'
+      }
     },
     disabled: {
       control: {
-        type: "boolean",
-      },
+        type: 'boolean'
+      }
     },
     errorMsg: {
       control: {
-        type: "text",
-      },
-    },
+        type: 'text'
+      }
+    }
   },
   args: {
     onChange: fn(),
     onIconClick: fn(),
-    label: "Hello",
-  },
-};
+    label: 'Hello'
+  }
+}
 
-export default meta;
+export default meta
 
-type Story = StoryObj<StoryProps>;
+type Story = StoryObj<StoryProps>
 
 export const Primary: Story = {
   args: {},
   render: (args) => {
-    return <TextField {...args} />;
-  },
-};
+    return <TextField {...args} />
+  }
+}
 export const Error: Story = {
   args: {
-    errorMsg: "This can't be empty.",
+    errorMsg: "This can't be empty."
   },
   render: (args) => {
-    return <TextField {...args} />;
-  },
-};
+    return <TextField {...args} />
+  }
+}
 export const WithIcon: Story = {
   args: {
-    icon: <FaBeer color="#fff" />,
+    icon: <FaBeer color="#fff" />
   },
   render: (args) => {
-    return <TextField {...args} />;
-  },
-};
+    return <TextField {...args} />
+  }
+}

@@ -1,18 +1,16 @@
-import style from "./LoginSocialBtn.module.scss";
-import "../../../index.css";
-import MetaIcon from "./icons/meta01.png";
-import MetaBGIcon from "./icons/meta.svg";
+import style from './LoginSocialBtn.module.scss'
+import '../../../index.css'
+import MetaIcon from './icons/meta01.png'
+import MetaBGIcon from './icons/meta.svg'
 
 type Props = {
-  varient: string;
-  isDisable?: boolean;
-};
+  varient: string
+  isDisable?: boolean
+}
 
 const LoginSocialBtn = ({ varient, isDisable = false }: Props) => {
   return (
-    <div
-      className={`${style.LoginSocialBtn} ${style[varient]} ${isDisable && style.disable}`}
-    >
+    <div className={`${style.LoginSocialBtn} ${style[varient]} ${isDisable && style.disable}`}>
       <div className={style.plainLogo}>
         <PlainLogo varient={varient} />
       </div>
@@ -24,13 +22,13 @@ const LoginSocialBtn = ({ varient, isDisable = false }: Props) => {
         <ColorLogo varient={varient} />
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default LoginSocialBtn;
+export default LoginSocialBtn
 
 const PlainLogo = ({ varient }: { varient: string }) => {
-  if (varient == "X") {
+  if (varient == 'X') {
     return (
       <svg
         width="25"
@@ -44,9 +42,9 @@ const PlainLogo = ({ varient }: { varient: string }) => {
           fill="white"
         />
       </svg>
-    );
+    )
   }
-  if (varient == "Telegram") {
+  if (varient == 'Telegram') {
     return (
       <svg
         width="33"
@@ -55,14 +53,14 @@ const PlainLogo = ({ varient }: { varient: string }) => {
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
       >
-        <g clip-path="url(#clip0_8426_151100)">
+        <g clipPath="url(#clip0_8426_151100)">
           <path
             d="M16.75 32C25.5866 32 32.75 24.8366 32.75 16C32.75 7.16344 25.5866 0 16.75 0C7.91344 0 0.75 7.16344 0.75 16C0.75 24.8366 7.91344 32 16.75 32Z"
             fill="url(#paint0_linear_8426_151100)"
           />
           <path
-            fill-rule="evenodd"
-            clip-rule="evenodd"
+            fillRule="evenodd"
+            clipRule="evenodd"
             d="M7.99261 15.8311C12.6569 13.7989 15.7672 12.4592 17.3234 11.8119C21.7668 9.96372 22.6901 9.64267 23.2919 9.63207C23.4243 9.62974 23.7202 9.66254 23.9119 9.81809C24.0738 9.94944 24.1183 10.1269 24.1396 10.2514C24.1609 10.3759 24.1875 10.6596 24.1664 10.8813C23.9256 13.4112 22.8837 19.5508 22.3536 22.3844C22.1294 23.5834 21.6877 23.9855 21.2602 24.0248C20.331 24.1103 19.6255 23.4108 18.7256 22.8208C17.3174 21.8977 16.5218 21.3231 15.1549 20.4223C13.5752 19.3813 14.5993 18.8092 15.4995 17.8741C15.7351 17.6294 19.829 13.9058 19.9082 13.568C19.9181 13.5257 19.9273 13.3682 19.8338 13.2851C19.7402 13.2019 19.6021 13.2304 19.5025 13.253C19.3613 13.285 17.1116 14.772 12.7536 17.7137C12.1151 18.1522 11.5367 18.3659 11.0185 18.3547C10.4472 18.3423 9.34826 18.0317 8.53133 17.7661C7.52933 17.4404 6.73296 17.2682 6.80231 16.715C6.83842 16.4269 7.23519 16.1323 7.99261 15.8311Z"
             fill="white"
           />
@@ -76,33 +74,22 @@ const PlainLogo = ({ varient }: { varient: string }) => {
             y2="31.7627"
             gradientUnits="userSpaceOnUse"
           >
-            <stop stop-color="#2AABEE" />
-            <stop offset="1" stop-color="#229ED9" />
+            <stop stopColor="#2AABEE" />
+            <stop offset="1" stopColor="#229ED9" />
           </linearGradient>
           <clipPath id="clip0_8426_151100">
-            <rect
-              width="32"
-              height="32"
-              fill="white"
-              transform="translate(0.75)"
-            />
+            <rect width="32" height="32" fill="white" transform="translate(0.75)" />
           </clipPath>
         </defs>
       </svg>
-    );
+    )
   }
-  if (varient == "MetaMask") {
-    return <img src={MetaIcon} />;
+  if (varient == 'MetaMask') {
+    return <img src={MetaIcon} />
   }
   return (
-    <svg
-      width="25"
-      height="24"
-      viewBox="0 0 25 24"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-    >
-      <g clip-path="url(#clip0_3351_156798)">
+    <svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <g clipPath="url(#clip0_3351_156798)">
         <path
           d="M12.2498 9.81815V14.4654H18.7079C18.4243 15.96 17.5733 17.2255 16.297 18.0764L20.1915 21.0982C22.4606 19.0037 23.7697 15.9273 23.7697 12.2728C23.7697 11.4219 23.6933 10.6037 23.5515 9.81828L12.2498 9.81815Z"
           fill="white"
@@ -122,19 +109,14 @@ const PlainLogo = ({ varient }: { varient: string }) => {
       </g>
       <defs>
         <clipPath id="clip0_3351_156798">
-          <rect
-            width="24"
-            height="24"
-            fill="white"
-            transform="translate(0.25)"
-          />
+          <rect width="24" height="24" fill="white" transform="translate(0.25)" />
         </clipPath>
       </defs>
     </svg>
-  );
-};
+  )
+}
 const ColorLogo = ({ varient }: { varient: string }) => {
-  if (varient == "X") {
+  if (varient == 'X') {
     return (
       <svg
         width="100%"
@@ -150,9 +132,9 @@ const ColorLogo = ({ varient }: { varient: string }) => {
           />
         </g>
       </svg>
-    );
+    )
   }
-  if (varient == "Telegram") {
+  if (varient == 'Telegram') {
     return (
       <svg
         width="100%"
@@ -161,29 +143,24 @@ const ColorLogo = ({ varient }: { varient: string }) => {
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
       >
-        <g opacity="0.15" clip-path="url(#clip0_8426_151098)">
+        <g opacity="0.15" clipPath="url(#clip0_8426_151098)">
           <path
-            fill-rule="evenodd"
-            clip-rule="evenodd"
+            fillRule="evenodd"
+            clipRule="evenodd"
             d="M24.75 12C24.75 18.6274 19.3774 24 12.75 24C6.12258 24 0.75 18.6274 0.75 12C0.75 5.37258 6.12258 0 12.75 0C19.3774 0 24.75 5.37258 24.75 12ZM13.18 8.85893C12.0128 9.3444 9.68014 10.3492 6.18189 11.8733C5.61383 12.0992 5.31626 12.3202 5.28917 12.5363C5.24339 12.9015 5.70071 13.0453 6.32347 13.2411C6.40818 13.2678 6.49595 13.2954 6.58594 13.3246C7.19864 13.5238 8.02283 13.7568 8.45129 13.766C8.83994 13.7744 9.27373 13.6142 9.75264 13.2853C13.0212 11.079 14.7084 9.96381 14.8143 9.93977C14.889 9.92281 14.9926 9.90148 15.0628 9.96385C15.1329 10.0262 15.126 10.1443 15.1186 10.176C15.0733 10.3691 13.2781 12.0381 12.3491 12.9018C12.0595 13.171 11.8541 13.362 11.8121 13.4056C11.718 13.5033 11.6221 13.5958 11.53 13.6846C10.9608 14.2333 10.5339 14.6448 11.5536 15.3168C12.0436 15.6397 12.4358 15.9067 12.827 16.1731C13.2542 16.4641 13.6803 16.7543 14.2316 17.1157C14.3721 17.2077 14.5062 17.3034 14.6369 17.3965C15.1341 17.751 15.5807 18.0694 16.1326 18.0186C16.4532 17.9891 16.7845 17.6876 16.9527 16.7884C17.3502 14.6631 18.1316 10.0585 18.3122 8.16097C18.328 7.99473 18.3081 7.78197 18.2922 7.68857C18.2762 7.59518 18.2428 7.46211 18.1214 7.3636C17.9776 7.24694 17.7556 7.22234 17.6564 7.22408C17.205 7.23203 16.5126 7.47282 13.18 8.85893Z"
             fill="white"
           />
         </g>
         <defs>
           <clipPath id="clip0_8426_151098">
-            <rect
-              width="24"
-              height="24"
-              fill="white"
-              transform="translate(0.75)"
-            />
+            <rect width="24" height="24" fill="white" transform="translate(0.75)" />
           </clipPath>
         </defs>
       </svg>
-    );
+    )
   }
-  if (varient == "MetaMask") {
-    return <img src={MetaBGIcon} />;
+  if (varient == 'MetaMask') {
+    return <img src={MetaBGIcon} />
   }
   return (
     <svg
@@ -193,7 +170,7 @@ const ColorLogo = ({ varient }: { varient: string }) => {
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
     >
-      <g opacity="0.15" clip-path="url(#clip0_4715_116066)">
+      <g opacity="0.15" clipPath="url(#clip0_4715_116066)">
         <path
           d="M12.2498 9.81815V14.4654H18.7079C18.4243 15.96 17.5733 17.2255 16.297 18.0764L20.1915 21.0982C22.4606 19.0037 23.7697 15.9273 23.7697 12.2728C23.7697 11.4219 23.6933 10.6037 23.5515 9.81828L12.2498 9.81815Z"
           fill="#4285F4"
@@ -213,26 +190,21 @@ const ColorLogo = ({ varient }: { varient: string }) => {
       </g>
       <defs>
         <clipPath id="clip0_4715_116066">
-          <rect
-            width="24"
-            height="24"
-            fill="white"
-            transform="translate(0.25)"
-          />
+          <rect width="24" height="24" fill="white" transform="translate(0.25)" />
         </clipPath>
       </defs>
     </svg>
-  );
-};
+  )
+}
 const BtnText = ({ varient }: { varient: string }) => {
-  if (varient == "X") {
-    return "Connect With X";
+  if (varient == 'X') {
+    return 'Connect With X'
   }
-  if (varient == "Telegram") {
-    return "Connect Telegram";
+  if (varient == 'Telegram') {
+    return 'Connect Telegram'
   }
-  if (varient == "MetaMask") {
-    return "Connect MetaMask";
+  if (varient == 'MetaMask') {
+    return 'Connect MetaMask'
   }
-  return "Connect With Google";
-};
+  return 'Connect With Google'
+}

@@ -1,6 +1,6 @@
-import React from "react";
-import style from "./TablePT.module.scss";
-type Props = {};
+import React from 'react'
+import style from './TablePT.module.scss'
+type Props = {}
 
 const TablePT = (props: Props) => {
   return (
@@ -37,105 +37,99 @@ const TablePT = (props: Props) => {
         <tbody>
           <tr>
             <td>
-              {" "}
+              {' '}
               <div className={style.td_con}>Content</div>
             </td>
             <td>
-              {" "}
+              {' '}
               <div className={style.td_con}>Content</div>
             </td>
             <td>
-              {" "}
+              {' '}
               <div className={style.td_con}>Content</div>
             </td>
             <td>
-              {" "}
-              <div className={style.td_con}>Content</div>
-            </td>
-          </tr>
-          <tr>
-            <td>
-              {" "}
-              <div className={style.td_con}>Content</div>
-            </td>
-            <td>
-              {" "}
-              <div className={style.td_con}>Content</div>
-            </td>
-            <td>
-              {" "}
-              <div className={style.td_con}>Content</div>
-            </td>
-            <td>
-              {" "}
+              {' '}
               <div className={style.td_con}>Content</div>
             </td>
           </tr>
           <tr>
             <td>
-              {" "}
+              {' '}
               <div className={style.td_con}>Content</div>
             </td>
             <td>
-              {" "}
+              {' '}
               <div className={style.td_con}>Content</div>
             </td>
             <td>
-              {" "}
+              {' '}
               <div className={style.td_con}>Content</div>
             </td>
             <td>
-              {" "}
+              {' '}
               <div className={style.td_con}>Content</div>
             </td>
           </tr>
           <tr>
             <td>
-              {" "}
+              {' '}
               <div className={style.td_con}>Content</div>
             </td>
             <td>
-              {" "}
+              {' '}
               <div className={style.td_con}>Content</div>
             </td>
             <td>
-              {" "}
+              {' '}
               <div className={style.td_con}>Content</div>
             </td>
             <td>
-              {" "}
+              {' '}
+              <div className={style.td_con}>Content</div>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              {' '}
+              <div className={style.td_con}>Content</div>
+            </td>
+            <td>
+              {' '}
+              <div className={style.td_con}>Content</div>
+            </td>
+            <td>
+              {' '}
+              <div className={style.td_con}>Content</div>
+            </td>
+            <td>
+              {' '}
               <div className={style.td_con}>Content</div>
             </td>
           </tr>
         </tbody>
       </table>
     </div>
-  );
-};
+  )
+}
 
-export default TablePT;
+export default TablePT
 
 const SortIcon = () => {
   return (
-    <svg
-      width="15"
-      height="23"
-      viewBox="0 0 15 23"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-    >
+    <svg width="15" height="23" viewBox="0 0 15 23" fill="none" xmlns="http://www.w3.org/2000/svg">
       <path
         d="M4.125 9.25L7.625 5.75L11.125 9.25"
         stroke="white"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        strokeLinecap="round"
+        strokeLinejoin="round"
       />
       <path
         d="M4.125 13.75L7.625 17.25L11.125 13.75"
         stroke="white"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        strokeLinecap="round"
+        strokeLinejoin="round"
       />
     </svg>
-  );
-};
+  )
+}

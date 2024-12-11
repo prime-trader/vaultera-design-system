@@ -1,12 +1,12 @@
-import { forwardRef } from "react";
+import { forwardRef } from 'react'
 
-import style from "../UserLoggedInAccount.module.scss";
-import ProfileImg from "../../../assets/profile_dropdown/profile.png";
+import style from '../UserLoggedInAccount.module.scss'
+import ProfileImg from '../../../assets/profile_dropdown/profile.png'
 interface DropdownButtonProps {
-  toggle: () => void;
-  open: boolean;
-  username: string;
-  isVerified: boolean;
+  toggle: () => void
+  open: boolean
+  username: string
+  isVerified: boolean
 }
 
 const DropdownButton = forwardRef<HTMLDivElement, DropdownButtonProps>(
@@ -14,7 +14,7 @@ const DropdownButton = forwardRef<HTMLDivElement, DropdownButtonProps>(
     return (
       <div
         onClick={toggle}
-        className={`${style["dropdown-btn"]} ${open ? style["button-open"] : ""}`}
+        className={`${style['dropdown-btn']} ${open ? style['button-open'] : ''}`}
         ref={ref}
       >
         <div className={style.imgCon}>
@@ -25,69 +25,51 @@ const DropdownButton = forwardRef<HTMLDivElement, DropdownButtonProps>(
           <label>{username}</label>
         </div>
         <span
-          className={style["toggle-icon"]}
+          className={style['toggle-icon']}
           aria-hidden="true"
           onClick={(e) => {
-            e.stopPropagation();
-            toggle();
+            e.stopPropagation()
+            toggle()
           }}
         >
           {open ? <DropDownUpArrow /> : <DropDownDownArrow />}
         </span>
       </div>
-    );
+    )
   }
-);
+)
 
-export default DropdownButton;
+export default DropdownButton
 
 const DropDownUpArrow = () => {
   return (
-    <svg
-      width="24"
-      height="24"
-      viewBox="0 0 24 24"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-    >
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
       <path
         d="M12.0001 9.33849C11.8796 9.33849 11.7675 9.35773 11.6636 9.39619C11.5598 9.43466 11.4611 9.50069 11.3675 9.59427L6.87325 14.0885C6.73478 14.2269 6.66395 14.401 6.66075 14.6106C6.65753 14.8202 6.72837 14.9975 6.87325 15.1423C7.01812 15.2872 7.19375 15.3596 7.40015 15.3596C7.60655 15.3596 7.78218 15.2872 7.92705 15.1423L12.0001 11.0692L16.0732 15.1423C16.2117 15.2808 16.3857 15.3516 16.5953 15.3548C16.8049 15.358 16.9822 15.2872 17.127 15.1423C17.2719 14.9975 17.3444 14.8218 17.3444 14.6154C17.3444 14.409 17.2719 14.2334 17.127 14.0885L12.6328 9.59427C12.5392 9.50069 12.4405 9.43466 12.3367 9.39619C12.2328 9.35773 12.1207 9.33849 12.0001 9.33849Z"
         fill="#9EA6BA"
       />
     </svg>
-  );
-};
+  )
+}
 
 const DropDownDownArrow = () => {
   return (
-    <svg
-      width="24"
-      height="24"
-      viewBox="0 0 24 24"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-    >
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
       <path
         d="M12.0001 14.6615C11.8796 14.6615 11.7675 14.6423 11.6636 14.6038C11.5598 14.5654 11.4611 14.4993 11.3675 14.4058L6.87325 9.91154C6.73478 9.77309 6.66395 9.59905 6.66075 9.38944C6.65753 9.17982 6.72837 9.00258 6.87325 8.85771C7.01812 8.71284 7.19375 8.64041 7.40015 8.64041C7.60655 8.64041 7.78218 8.71284 7.92705 8.85771L12.0001 12.9308L16.0732 8.85771C16.2117 8.71926 16.3857 8.64843 16.5953 8.64521C16.8049 8.64201 16.9822 8.71284 17.127 8.85771C17.2719 9.00258 17.3444 9.17822 17.3444 9.38464C17.3444 9.59104 17.2719 9.76667 17.127 9.91154L12.6328 14.4058C12.5392 14.4993 12.4405 14.5654 12.3367 14.6038C12.2328 14.6423 12.1207 14.6615 12.0001 14.6615Z"
         fill="white"
       />
     </svg>
-  );
-};
+  )
+}
 const VerifiedIcon = () => {
   return (
-    <svg
-      width="20"
-      height="21"
-      viewBox="0 0 20 21"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-    >
+    <svg width="20" height="21" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg">
       <circle cx="10.0039" cy="10.5" r="5.71484" fill="white" />
       <path
         d="M9.99986 1.3125C10.7146 1.31258 11.4047 1.57289 11.9414 2.04484L12.0829 2.17805L12.7242 2.81945C12.9003 2.9943 13.1301 3.10469 13.3767 3.13273L13.5007 3.14008H14.4196C15.9786 3.14 17.2667 4.35672 17.3553 5.9132L17.3599 6.08047V6.9993C17.3599 7.24742 17.4444 7.48906 17.597 7.68203L17.6796 7.77391L18.3201 8.41523C19.422 9.51086 19.4811 11.2747 18.4552 12.4417L18.322 12.5832L17.6806 13.2245C17.5057 13.4005 17.3953 13.6304 17.3673 13.877L17.3599 14.001V14.9198C17.36 16.4788 16.1433 17.767 14.5868 17.8555L14.4196 17.8602H13.5007C13.253 17.8602 13.0124 17.9438 12.818 18.0973L12.7261 18.1799L12.0847 18.8204C10.9892 19.9223 9.22533 19.9814 8.0583 18.9555L7.91682 18.8222L7.27549 18.1809C7.09947 18.006 6.86963 17.8956 6.62307 17.8675L6.49901 17.8602H5.58018C4.02119 17.8602 2.73307 16.6435 2.6444 15.087L2.63986 14.9198V14.0009C2.63979 13.7532 2.55627 13.5127 2.40276 13.3183L2.3201 13.2264L1.67963 12.585C0.577755 11.4894 0.518615 9.72563 1.54455 8.55859L1.67776 8.41711L2.31916 7.7757C2.49401 7.59969 2.6044 7.36984 2.63244 7.12336L2.63986 6.9993V6.08047L2.6444 5.9132C2.7294 4.42078 3.92049 3.22961 5.41291 3.14469L5.58018 3.14008H6.49901C6.74674 3.14 6.98729 3.05648 7.18174 2.90305L7.27361 2.82031L7.91494 2.17992C8.46682 1.62477 9.21713 1.31266 9.99986 1.3125ZM13.3969 8.00359C13.0381 7.64492 12.4564 7.64492 12.0976 8.00359L9.07182 11.0285L7.88377 9.84133L7.79736 9.76508C7.23776 9.33242 6.41971 9.66781 6.32479 10.3687C6.28643 10.6524 6.38244 10.9378 6.58447 11.1405L8.42221 12.9783L8.50854 13.0545C8.87432 13.3383 9.39408 13.3056 9.72143 12.9783L13.3969 9.30289L13.4731 9.21648C13.7569 8.8507 13.7242 8.33094 13.3969 8.00359Z"
         fill="#3999FB"
       />
     </svg>
-  );
-};
+  )
+}

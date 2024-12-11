@@ -1,12 +1,12 @@
-import React from "react";
-import style from "./BackToTopBtn.module.scss";
-import "../../../index.css";
+import React from 'react'
+import style from './BackToTopBtn.module.scss'
+import '../../../index.css'
 
 type ButtonProps = {
-  onClick: () => void;
+  onClick: () => void
 
-  visible: boolean;
-};
+  visible: boolean
+}
 
 const BackToTopBtn: React.FC<ButtonProps> = ({ onClick, visible }) => {
   return (
@@ -16,27 +16,21 @@ const BackToTopBtn: React.FC<ButtonProps> = ({ onClick, visible }) => {
     >
       <ArrowIcon />
     </button>
-  );
-};
+  )
+}
 
 const ArrowIcon = () => {
   return (
-    <svg
-      width="25"
-      height="24"
-      viewBox="0 0 25 24"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-    >
+    <svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
       <path
         d="M18.25 15L12.25 9L6.25 15"
         stroke="white"
-        stroke-width="2"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
       />
     </svg>
-  );
-};
+  )
+}
 
-export default BackToTopBtn;
+export default BackToTopBtn

@@ -1,25 +1,18 @@
-import React from "react";
-import style from "../UserLoggedInAccount.module.scss";
+import React from 'react'
+import style from '../UserLoggedInAccount.module.scss'
 
 interface DropdownItemProps {
-  children: React.ReactNode; // Content inside the dropdown item
-  onClick: () => void; // Function to handle click events
-  isHr?: boolean;
+  children: React.ReactNode // Content inside the dropdown item
+  onClick: () => void // Function to handle click events
+  isHr?: boolean
 }
 
-const DropdownItem: React.FC<DropdownItemProps> = ({
-  children,
-  onClick,
-  isHr = false,
-}) => {
+const DropdownItem: React.FC<DropdownItemProps> = ({ children, onClick, isHr = false }) => {
   return (
-    <div
-      className={`${style["dropdown-item"]} ${isHr && style.hr}`}
-      onClick={onClick}
-    >
+    <div className={`${style['dropdown-item']} ${isHr && style.hr}`} onClick={onClick}>
       {children}
     </div>
-  );
-};
+  )
+}
 
-export default DropdownItem;
+export default DropdownItem

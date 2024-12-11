@@ -1,41 +1,41 @@
-import { ComponentProps } from "react";
-import PasswordField from "./PasswordField";
-import { Meta, StoryObj } from "@storybook/react";
-import { fn } from "@storybook/test";
-import { FaBeer } from "react-icons/fa";
-type StoryProps = ComponentProps<typeof PasswordField>;
+import { ComponentProps } from 'react'
+import PasswordField from './PasswordField'
+import { Meta, StoryObj } from '@storybook/react'
+import { fn } from '@storybook/test'
+import { FaBeer } from 'react-icons/fa'
+type StoryProps = ComponentProps<typeof PasswordField>
 
 const meta: Meta<StoryProps> = {
   component: PasswordField,
-  tags: ["autodocs"],
+  tags: ['autodocs'],
   parameters: {
-    layout: "centered",
+    layout: 'centered'
   },
   argTypes: {
     value: {
       control: {
-        type: "text",
-      },
+        type: 'text'
+      }
     },
     size: {
-      options: ["450px", "100%"],
+      options: ['450px', '100%'],
       control: {
-        type: "select",
-      },
-    },
+        type: 'select'
+      }
+    }
   },
   args: {
-    onChange: fn(),
-  },
-};
+    onChange: fn()
+  }
+}
 
-export default meta;
+export default meta
 
-type Story = StoryObj<StoryProps>;
+type Story = StoryObj<StoryProps>
 
 export const Primary: Story = {
   args: {},
   render: (args) => {
-    return <PasswordField {...args} />;
-  },
-};
+    return <PasswordField {...args} />
+  }
+}

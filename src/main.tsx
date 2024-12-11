@@ -1,27 +1,19 @@
-import React, { StrictMode } from 'react'
+import { StrictMode } from 'react'
 import ReactDOM from 'react-dom/client'
-import { RouterProvider, createRouter } from '@tanstack/react-router'
 
-// Import the generated route tree
-import { routeTree } from './routeTree.gen'
+// Get the root element from the HTML
+const rootElement = document.getElementById('root')
 
-// Create a new router instance
-const router = createRouter({ routeTree })
-
-// Register the router instance for type safety
-declare module '@tanstack/react-router' {
-  interface Register {
-    router: typeof router
-  }
+if (!rootElement) {
+  throw new Error("Root element with id 'root' not found in the document.")
 }
 
-// Render the app
-const rootElement = document.getElementById('root')!
-if (!rootElement.innerHTML) {
-  const root = ReactDOM.createRoot(rootElement)
-  root.render(
-    <StrictMode>
-      <RouterProvider router={router} />
-    </StrictMode>,
-  )
-}
+// Initialize React's root
+const root = ReactDOM.createRoot(rootElement)
+
+// Render the application
+root.render(
+  <StrictMode>
+    <div>Welcome to Vaultra UI library</div>
+  </StrictMode>
+)

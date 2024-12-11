@@ -1,30 +1,25 @@
-import { ComponentProps } from "react";
-import Pagination from "./Pagination";
-import { Meta, StoryObj } from "@storybook/react";
-type StoryProps = ComponentProps<typeof Pagination>;
+import { ComponentProps } from 'react'
+import Pagination from './Pagination'
+import { Meta, StoryObj } from '@storybook/react'
+type StoryProps = ComponentProps<typeof Pagination>
 
 const meta: Meta<StoryProps> = {
   component: Pagination,
-  tags: ["autodocs"],
+  tags: ['autodocs'],
   parameters: {
-    layout: 'centered',
+    layout: 'centered'
   },
-  argTypes: {
-   
-  
-  },
-  args: {
-  
-  },
-};
+  argTypes: {},
+  args: {}
+}
 
-export default meta;
+export default meta
 
-type Story = StoryObj<StoryProps>;
+type Story = StoryObj<StoryProps>
 
 export const Primary: Story = {
   args: {},
   render: (args) => {
-    return <Pagination {...args} />;
-  },
-};
+    return <Pagination {...args} />
+  }
+}

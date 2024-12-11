@@ -1,25 +1,25 @@
-import { ComponentProps } from "react";
-import PhoneDropdown from "./PhoneDropdown";
-import { Meta, StoryObj } from "@storybook/react";
-type StoryProps = ComponentProps<typeof PhoneDropdown>;
+import { ComponentProps } from 'react'
+import PhoneDropdown from './PhoneDropdown'
+import { Meta, StoryObj } from '@storybook/react'
+type StoryProps = ComponentProps<typeof PhoneDropdown>
 
 const meta: Meta<StoryProps> = {
   component: PhoneDropdown,
-  tags: ["autodocs"],
+  tags: ['autodocs'],
   parameters: {
-    layout: "centered",
+    layout: 'centered'
   },
   argTypes: {},
-  args: {},
-};
+  args: {}
+}
 
-export default meta;
+export default meta
 
-type Story = StoryObj<StoryProps>;
+type Story = StoryObj<StoryProps>
 
 export const Primary: Story = {
   args: {},
   render: (args) => {
-    return <PhoneDropdown {...args} />;
-  },
-};
+    return <PhoneDropdown {...args} />
+  }
+}

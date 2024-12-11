@@ -1,58 +1,58 @@
-import { ComponentProps } from "react";
-import CopyEditButton from "./CopyEditButton";
-import { Meta, StoryObj } from "@storybook/react";
-type StoryProps = ComponentProps<typeof CopyEditButton>;
+import { ComponentProps } from 'react'
+import CopyEditButton from './CopyEditButton'
+import { Meta, StoryObj } from '@storybook/react'
+type StoryProps = ComponentProps<typeof CopyEditButton>
 
 const meta: Meta<StoryProps> = {
   component: CopyEditButton,
-  tags: ["autodocs"],
+  tags: ['autodocs'],
   parameters: {
-    layout: "centered",
+    layout: 'centered'
   },
   argTypes: {
     varient: {
-      options: ["copyvar1", "copyvar2", "edit"],
+      options: ['copyvar1', 'copyvar2', 'edit'],
       control: {
-        type: "select",
-      },
+        type: 'select'
+      }
     },
     value: {
       control: {
-        type: "text",
-      },
-    },
+        type: 'text'
+      }
+    }
   },
-  args: {},
-};
+  args: {}
+}
 
-export default meta;
+export default meta
 
-type Story = StoryObj<StoryProps>;
+type Story = StoryObj<StoryProps>
 
 export const CopyVar01: Story = {
   args: {
-    varient: "copyvar1",
-    value: "i am copied!",
+    varient: 'copyvar1',
+    value: 'i am copied!'
   },
   render: (args) => {
-    return <CopyEditButton {...args} />;
-  },
-};
+    return <CopyEditButton {...args} />
+  }
+}
 export const CopyVar02: Story = {
   args: {
-    varient: "copyvar2",
-    value: "i am copied!",
+    varient: 'copyvar2',
+    value: 'i am copied!'
   },
   render: (args) => {
-    return <CopyEditButton {...args} />;
-  },
-};
+    return <CopyEditButton {...args} />
+  }
+}
 export const EditBtn: Story = {
   args: {
-    varient: "edit",
-    onEdit: () => alert("Edit button clicked"),
+    varient: 'edit',
+    onEdit: () => alert('Edit button clicked')
   },
   render: (args) => {
-    return <CopyEditButton {...args} />;
-  },
-};
+    return <CopyEditButton {...args} />
+  }
+}

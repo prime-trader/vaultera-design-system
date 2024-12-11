@@ -1,65 +1,64 @@
-import { ComponentProps } from "react";
-import LoginSocialBtn from "./LoginSocialBtn";
-import { Meta, StoryObj } from "@storybook/react";
-type StoryProps = ComponentProps<typeof LoginSocialBtn>;
+import { ComponentProps } from 'react'
+import LoginSocialBtn from './LoginSocialBtn'
+import { Meta, StoryObj } from '@storybook/react'
+type StoryProps = ComponentProps<typeof LoginSocialBtn>
 
 const meta: Meta<StoryProps> = {
   component: LoginSocialBtn,
-  tags: ["autodocs"],
+  tags: ['autodocs'],
   parameters: {
-    layout: "centered",
+    layout: 'centered'
   },
   argTypes: {
     varient: {
-      options: ["Google", "X", "Telegram", "MetaMask"],
+      options: ['Google', 'X', 'Telegram', 'MetaMask'],
       control: {
-        type: "select",
-      },
+        type: 'select'
+      }
     },
     isDisable: {
-     
       control: {
-        type:"boolean",
-      },
-    },
+        type: 'boolean'
+      }
+    }
   },
-  args: {},
-};
+  args: {}
+}
 
-export default meta;
+export default meta
 
-type Story = StoryObj<StoryProps>;
+type Story = StoryObj<StoryProps>
 
 export const Google: Story = {
   args: {
-    varient: "Google",
+    varient: 'Google'
   },
   render: (args) => {
-    return <LoginSocialBtn {...args} />;
-  },
-};
+    return <LoginSocialBtn {...args} />
+  }
+}
 export const X: Story = {
   args: {
-    varient: "X",
+    varient: 'X'
   },
   render: (args) => {
-    return <LoginSocialBtn {...args} />;
-  },
-};
+    return <LoginSocialBtn {...args} />
+  }
+}
 
 export const Telegram: Story = {
   args: {
-    varient: "Telegram",
+    varient: 'Telegram'
   },
   render: (args) => {
-    return <LoginSocialBtn {...args} />;
-  },
-};
+    return <LoginSocialBtn {...args} />
+  }
+}
 export const MetaMask: Story = {
   args: {
-    varient: "MetaMask",
+    varient: 'MetaMask'
   },
   render: (args) => {
-    return <LoginSocialBtn {...args} />;
-  },
-};
+    return <LoginSocialBtn {...args} />
+  }
+}

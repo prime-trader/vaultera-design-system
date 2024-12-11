@@ -1,56 +1,56 @@
-import { ComponentProps } from "react";
-import ButtonLoading from "./ButtonLoading";
-import { Meta, StoryObj } from "@storybook/react";
-import { fn } from "@storybook/test";
+import { ComponentProps } from 'react'
+import ButtonLoading from './ButtonLoading'
+import { Meta, StoryObj } from '@storybook/react'
+import { fn } from '@storybook/test'
 
-type StoryProps = ComponentProps<typeof ButtonLoading>;
+type StoryProps = ComponentProps<typeof ButtonLoading>
 
 const meta: Meta<StoryProps> = {
   component: ButtonLoading,
-  tags: ["autodocs"],
+  tags: ['autodocs'],
   parameters: {
-    layout: 'centered',
+    layout: 'centered'
   },
   argTypes: {
     label: {
       control: {
-        type: "text",
-      },
+        type: 'text'
+      }
     },
     size: {
-      options: ["150px", "100%"],
+      options: ['150px', '100%'],
       control: {
-        type: "select",
-      },
+        type: 'select'
+      }
     },
     type: {
-      options: ["button", "submit"],
+      options: ['button', 'submit'],
       control: {
-        type: "select",
-      },
+        type: 'select'
+      }
     },
     loading_percentage: {
       control: {
-        type: "range",
+        type: 'range',
         min: 0,
-        max: 100,
-      },
-    },
+        max: 100
+      }
+    }
   },
   args: {
     onClick: fn(),
-    label: "Hi",
-    loading_percentage: 10,
-  },
-};
+    label: 'Hi',
+    loading_percentage: 10
+  }
+}
 
-export default meta;
+export default meta
 
-type Story = StoryObj<StoryProps>;
+type Story = StoryObj<StoryProps>
 
 export const Primary: Story = {
   args: {},
   render: (args) => {
-    return <ButtonLoading {...args} />;
-  },
-};
+    return <ButtonLoading {...args} />
+  }
+}

@@ -1,55 +1,55 @@
-import { ComponentProps } from "react";
-import ToastNotification from "./ToastNotification";
-import { Meta, StoryObj } from "@storybook/react";
-type StoryProps = ComponentProps<typeof ToastNotification>;
+import { ComponentProps } from 'react'
+import ToastNotification from './ToastNotification'
+import { Meta, StoryObj } from '@storybook/react'
+type StoryProps = ComponentProps<typeof ToastNotification>
 
 const meta: Meta<StoryProps> = {
   component: ToastNotification,
-  tags: ["autodocs"],
+  tags: ['autodocs'],
   parameters: {
-    layout: "centered",
+    layout: 'centered'
   },
   argTypes: {
     varient: {
-      options: ["success", "fail", "warning"],
+      options: ['success', 'fail', 'warning'],
       control: {
-        type: "select",
-      },
+        type: 'select'
+      }
     },
     message: {
       control: {
-        type: "text",
-      },
-    },
+        type: 'text'
+      }
+    }
   },
   args: {
-    message: "Lorem ipsum dolor sit amet consectetur.",
-  },
-};
+    message: 'Lorem ipsum dolor sit amet consectetur.'
+  }
+}
 
-export default meta;
+export default meta
 
-type Story = StoryObj<StoryProps>;
+type Story = StoryObj<StoryProps>
 
 export const Success: Story = {
   args: {},
   render: (args) => {
-    return <ToastNotification {...args} />;
-  },
-};
+    return <ToastNotification {...args} />
+  }
+}
 export const Fail: Story = {
   args: {
-    varient: "fail",
+    varient: 'fail'
   },
   render: (args) => {
-    return <ToastNotification {...args} />;
-  },
-};
+    return <ToastNotification {...args} />
+  }
+}
 export const Warning: Story = {
   args: {
-    varient: "warning",
+    varient: 'warning'
   },
   render: (args) => {
-    return <ToastNotification {...args} />;
-  },
-};
+    return <ToastNotification {...args} />
+  }
+}
