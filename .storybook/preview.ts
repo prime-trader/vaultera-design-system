@@ -1,4 +1,8 @@
 import type { Preview } from '@storybook/react'
+import '@fontsource/inter/400.css' // For normal weight
+import '@fontsource/inter/500.css' // For medium weight
+import '@fontsource/inter/600.css' // For semi-bold weight
+import '@fontsource/inter/700.css' // For bold weight
 
 const kindleViewports = {
   iphone14: {
