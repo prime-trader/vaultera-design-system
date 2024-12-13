@@ -1,5 +1,7 @@
 import React, { useState } from 'react'
 // @ts-expect-error import can be cause error for ts as submodule
+// TODO: resolved with submodule
+// eslint-disable-next-line import/no-unresolved
 import * as Icons from '@icons/src/index'
 import styles from './icons.module.scss'
 
@@ -48,7 +50,11 @@ const IconViewer: React.FC = () => {
                       <Icon width={50} height={50} />
                     </div>
                     <p className={styles.iconName}>{name}</p>
-                    <button className={styles.copyButton} onClick={() => handleCopy(name)}>
+                    <button
+                      type="button"
+                      className={styles.copyButton}
+                      onClick={() => handleCopy(name)}
+                    >
                       {copied === name ? 'Copied!' : 'Copy'}
                     </button>
                   </div>

@@ -1,24 +1,23 @@
-import React from 'react'
 import style from './Pagination.module.scss'
-type Props = {}
+type Props = React.HTMLAttributes<HTMLDivElement>
 
-const Pagination = (props: Props) => {
+const Pagination = ({ className, ...rest }: Props) => {
   return (
-    <div className={style.Pagination}>
+    <div className={`${style.Pagination} ${className}`} {...rest}>
       <div className={`${style.box} ${style.diabled}`}>
         <LeftArrowIcon />
       </div>
       <div className={`${style.box} ${style.selected}`}>
-        <label>1</label>
+        <label htmlFor="page-1">1</label>
       </div>
       <div className={style.box}>
-        <label>2</label>
+        <label htmlFor="page-2">2</label>
       </div>
       <div className={style.box}>
-        <label>...</label>
+        <label htmlFor="page-3">...</label>
       </div>
       <div className={style.box}>
-        <label>10</label>
+        <label htmlFor="page-10">10</label>
       </div>
       <div className={style.box}>
         <RightArrowIcon />

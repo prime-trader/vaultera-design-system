@@ -11,7 +11,7 @@ import prettier from 'eslint-plugin-prettier/recommended'
 export default tseslint.config(
   // TODO: later will remove from ignores
   // temp disable icons, components, stories
-  { ignores: ['dist', 'storybook-static', 'src/assets/icons', 'src/Components', 'src/stories'] },
+  { ignores: ['dist', 'storybook-static', 'src/assets/icons', 'src/Components',] },
   {
     extends: [
       // js
