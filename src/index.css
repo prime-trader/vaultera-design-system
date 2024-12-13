@@ -1,42 +1,30 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-:root {
-}
-@font-face {
-  font-family: "Gilroy-Regular";
-  src: url("./assets/fonts/gilroy/Gilroy-Regular.ttf") format("truetype");
-}
-@font-face {
-  font-family: "Gilroy-Bold";
-  src: url("./assets/fonts/gilroy/Gilroy-Bold.ttf") format("truetype");
-}
-@font-face {
-  font-family: "Gilroy-SemiBold";
-  src: url("./assets/fonts/gilroy/Gilroy-SemiBold.ttf") format("truetype");
-}
-@font-face {
-  font-family: "Gilroy-Medium";
-  src: url("./assets/fonts/gilroy/Gilroy-Medium.ttf") format("truetype");
+
+/* 
+ * Styles for the Welcome Page
+ * ===========================
+ * This section contains styles for the Welcome Page message.
+ */
+
+.page-message {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: #c3f84d;
+  text-align: center;
 }
 
+.message-text {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #171616;
+}
 
-@font-face {
-  font-family: "Roboto-Light";
-  src: url("./assets/fonts/gilroy/Gilroy-Light.ttf") format("truetype");
-}
-@font-face {
-  font-family: "Roboto";
-  src: url("./assets/fonts/gilroy/Gilroy-Regular.ttf") format("truetype");
-}
-@font-face {
-  font-family: "Roboto-Bold";
-  src: url("./assets/fonts/gilroy/Gilroy-Bold.ttf") format("truetype");
-}
-@font-face {
-  font-family: "Roboto-Medium";
-  src: url("./assets/fonts/gilroy/Gilroy-Medium.ttf") format("truetype");
-}
+/* End of Welcome Page Styles */
+
+
+
+
 /* Webkit-based browsers (Chrome, Edge, Safari) */
 ::-webkit-scrollbar {
   width: 4px; /* Scrollbar width */

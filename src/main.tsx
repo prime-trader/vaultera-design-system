@@ -1,5 +1,7 @@
 import { StrictMode } from 'react'
 import ReactDOM from 'react-dom/client'
+import './index.css'
+import Welcome from './Welcome'
 
 // Get the root element from the HTML
 const rootElement = document.getElementById('root')
@@ -14,6 +16,6 @@ const root = ReactDOM.createRoot(rootElement)
 // Render the application
 root.render(
   <StrictMode>
-    <div>Welcome to Vaultra UI library</div>
+    <Welcome />
   </StrictMode>
 )
