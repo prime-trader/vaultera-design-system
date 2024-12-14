@@ -9,5 +9,10 @@ export default defineConfig({
     alias: {
       '@icons': path.resolve(__dirname, 'src/assets/icons')
     }
+  },
+  build: {
+    rollupOptions: {
+      external: ['src/assets/icons', 'src/Components', 'storybook-static', 'dist']
+    }
   }
 })
