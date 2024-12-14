@@ -3,6 +3,9 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
+  "workspaces": [
+    "src/assets/icons"
+  ],
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
@@ -11,7 +14,8 @@
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
     "deploy-storybook": "gh-pages -d storybook-static",
-    "prepare": "husky"
+    "prepare": "husky",
+    "build:icons": "npm run build:icons --prefix src/assets/icons"
   },
   "dependencies": {
     "clsx": "^2.1.1",

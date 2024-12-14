@@ -110,6 +110,25 @@ It holds design system for vaultra ui.
 
 ---
 
+6. **ICON updates / fetch**
+
+   Update icons submodule
+
+   ```bash
+   git submodule update --init --recursive
+
+   OR
+   
+   git submodule update --remote // update from the remote
+   ```
+
+   build icons naviagte into the icons module:
+   ```bash
+   yarn build or npm run build
+   ```
+
+   do it same after adding new svgs into the icon directory.
+
 ## Additional Notes
 
 - For detailed customization of Storybook, refer to the [Storybook documentation](https://storybook.js.org/docs).

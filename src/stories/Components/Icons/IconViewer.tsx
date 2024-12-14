@@ -2,10 +2,16 @@ import React, { useState } from 'react'
 // @ts-expect-error import can be cause error for ts as submodule
 // TODO: resolved with submodule
 // eslint-disable-next-line import/no-unresolved
-import * as Icons from '@icons/src/index'
+import * as Icons from '@icons/dist/index'
 import styles from './icons.module.scss'
 
-type IconComponentType = React.ComponentType<{ width: number; height: number }>
+type IconComponentType = React.ComponentType<{
+  width?: number
+  height?: number
+  stroke?: string
+  fill?: string
+  color?: string
+}>
 
 // IconViewer Component
 const IconViewer: React.FC = () => {
@@ -47,7 +53,7 @@ const IconViewer: React.FC = () => {
                 return (
                   <div key={name} className={styles.card}>
                     <div className={styles.iconContainer}>
-                      <Icon width={50} height={50} />
+                      <Icon width={50} height={50} color="red" />
                     </div>
                     <p className={styles.iconName}>{name}</p>
                     <button
