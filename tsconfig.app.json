@@ -23,6 +23,12 @@
     "noUncheckedSideEffectImports": true
   },
   "include": ["src"],
+  "exclude": [
+    "dist",
+    "storybook-static",
+    "src/assets/icons",
+    "src/Components"
+  ],
 
   // fix path import for ts, and setup alias
   "baseUrl": ".",
