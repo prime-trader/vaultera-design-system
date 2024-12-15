@@ -49,10 +49,7 @@
   opacity: 0;
   pointer-events: none;
   border-radius: 15px;
-  background: var(
-    --background-content_bg-content_bg-5,
-    rgba(137, 137, 234, 0.05)
-  );
+  background: var(--background-content_bg-content_bg-5, rgba(137, 137, 234, 0.05));
   box-shadow: 0px 4px 25px 0px rgba(0, 0, 0, 0.15);
   backdrop-filter: blur(60px);
 

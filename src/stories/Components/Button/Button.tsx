@@ -9,7 +9,7 @@ type ButtonProps = {
   disabled?: boolean
   variant?: 'primary' | 'outline'
   size?: '150px' | '100%' | string
-  icon?: React.ReactNode
+  icon?: React.ReactNode // Optional prop
   tags?: string
   type?: 'button' | 'submit'
 }

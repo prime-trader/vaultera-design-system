@@ -34,10 +34,7 @@
 
   &.button-open {
     border: 1px solid var(--purple-purple, #d376ff);
-    background: var(
-      --background-content_bg-content_bg-5,
-      rgba(137, 137, 234, 0.05)
-    );
+    background: var(--background-content_bg-content_bg-5, rgba(137, 137, 234, 0.05));
     backdrop-filter: blur(60px);
   }
   .leftSide {
@@ -64,7 +61,7 @@
     border: none;
     outline: none;
     color: var(--White-white_50, rgba(255, 255, 255, 1));
-flex-grow: 1;
+    flex-grow: 1;
     /* input/Text */
     font-family: Gilroy-Medium;
     font-size: 16px;
@@ -93,10 +90,7 @@ flex-grow: 1;
   opacity: 0;
   pointer-events: none;
   border-radius: 12px;
-  background: var(
-    --background-content_bg-content_bg-5,
-    rgba(137, 137, 234, 0.05)
-  );
+  background: var(--background-content_bg-content_bg-5, rgba(137, 137, 234, 0.05));
   backdrop-filter: blur(60px);
 
   &::-webkit-scrollbar {

@@ -4,38 +4,37 @@
 :root {
 }
 @font-face {
-  font-family: "Gilroy-Regular";
-  src: url("./assets/fonts/gilroy/Gilroy-Regular.ttf") format("truetype");
+  font-family: 'Gilroy-Regular';
+  src: url('./assets/fonts/gilroy/Gilroy-Regular.ttf') format('truetype');
 }
 @font-face {
-  font-family: "Gilroy-Bold";
-  src: url("./assets/fonts/gilroy/Gilroy-Bold.ttf") format("truetype");
+  font-family: 'Gilroy-Bold';
+  src: url('./assets/fonts/gilroy/Gilroy-Bold.ttf') format('truetype');
 }
 @font-face {
-  font-family: "Gilroy-SemiBold";
-  src: url("./assets/fonts/gilroy/Gilroy-SemiBold.ttf") format("truetype");
+  font-family: 'Gilroy-SemiBold';
+  src: url('./assets/fonts/gilroy/Gilroy-SemiBold.ttf') format('truetype');
 }
 @font-face {
-  font-family: "Gilroy-Medium";
-  src: url("./assets/fonts/gilroy/Gilroy-Medium.ttf") format("truetype");
+  font-family: 'Gilroy-Medium';
+  src: url('./assets/fonts/gilroy/Gilroy-Medium.ttf') format('truetype');
 }
 
-
 @font-face {
-  font-family: "Roboto-Light";
-  src: url("./assets/fonts/gilroy/Gilroy-Light.ttf") format("truetype");
+  font-family: 'Roboto-Light';
+  src: url('./assets/fonts/gilroy/Gilroy-Light.ttf') format('truetype');
 }
 @font-face {
-  font-family: "Roboto";
-  src: url("./assets/fonts/gilroy/Gilroy-Regular.ttf") format("truetype");
+  font-family: 'Roboto';
+  src: url('./assets/fonts/gilroy/Gilroy-Regular.ttf') format('truetype');
 }
 @font-face {
-  font-family: "Roboto-Bold";
-  src: url("./assets/fonts/gilroy/Gilroy-Bold.ttf") format("truetype");
+  font-family: 'Roboto-Bold';
+  src: url('./assets/fonts/gilroy/Gilroy-Bold.ttf') format('truetype');
 }
 @font-face {
-  font-family: "Roboto-Medium";
-  src: url("./assets/fonts/gilroy/Gilroy-Medium.ttf") format("truetype");
+  font-family: 'Roboto-Medium';
+  src: url('./assets/fonts/gilroy/Gilroy-Medium.ttf') format('truetype');
 }
 /* Webkit-based browsers (Chrome, Edge, Safari) */
 ::-webkit-scrollbar {
@@ -63,6 +62,6 @@ input::-webkit-inner-spin-button {
 }
 
 /* Firefox */
-input[type=number] {
+input[type='number'] {
   -moz-appearance: textfield;
 }

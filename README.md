@@ -1,4 +1,3 @@
-
 # Vaultra Design System Documentation
 
 ## Storybook Setup
@@ -9,27 +8,27 @@ It holds design system for vaultra ui.
 
 - **Run Storybook in development mode**:
 
-   ```bash
-   npm run storybook
-   ```
+  ```bash
+  npm run storybook
+  ```
 
-   This will start the Storybook server at `http://localhost:6006`, where you can view the component library in development mode.
+  This will start the Storybook server at `http://localhost:6006`, where you can view the component library in development mode.
 
 - **Build Storybook for production**:
 
-   ```bash
-   npm run build-storybook
-   ```
+  ```bash
+  npm run build-storybook
+  ```
 
-   This command creates a static version of your Storybook that can be deployed to a server.
+  This command creates a static version of your Storybook that can be deployed to a server.
 
 - **Deploy Storybook to GitHub Pages**:
 
-   ```bash
-   npm run deploy-storybook
-   ```
+  ```bash
+  npm run deploy-storybook
+  ```
 
-   This deploys the built Storybook to GitHub Pages at [https://prime-trader.github.io/pt-frontend-ui/](https://prime-trader.github.io/pt-frontend-ui/).
+  This deploys the built Storybook to GitHub Pages at [https://prime-trader.github.io/pt-frontend-ui/](https://prime-trader.github.io/pt-frontend-ui/).
 
 ### Configuration
 
@@ -42,39 +41,39 @@ It holds design system for vaultra ui.
 
 - **Run Storybook in development mode**:
 
-   ```bash
-   npm run storybook
-   ```
+  ```bash
+  npm run storybook
+  ```
 
 - **Build Storybook for production**:
 
-   ```bash
-   npm run build-storybook
-   ```
+  ```bash
+  npm run build-storybook
+  ```
 
 - **Deploy Storybook to GitHub Pages**:
 
-   ```bash
-   npm run deploy-storybook
-   ```
+  ```bash
+  npm run deploy-storybook
+  ```
 
 - **Run linting**:
 
-   ```bash
-   npm run lint
-   ```
+  ```bash
+  npm run lint
+  ```
 
 - **Preview the production build using Vite**:
 
-   ```bash
-   npm run preview
-   ```
+  ```bash
+  npm run preview
+  ```
 
 - **Prepare Husky hooks**:
 
-   ```bash
-   npm run prepare
-   ```
+  ```bash
+  npm run prepare
+  ```
 
 ---
 
@@ -102,7 +101,7 @@ It holds design system for vaultra ui.
 
    ```json
    {
-     "semi": true,
+     "semi": true
    }
    ```
 
