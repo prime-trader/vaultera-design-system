@@ -3,7 +3,7 @@ import React, { useState } from 'react'
 // TODO: resolved with submodule
 // eslint-disable-next-line import/no-unresolved
 import Icons from '@icons/dist/index'
-// icons can be imported like import `import Swap from '@icons/dist/index`
+// icons can be imported like import `import Swap from '@icons/dist/index'
 import styles from './icons.module.scss'
 
 type IconComponentType = React.ComponentType<{
