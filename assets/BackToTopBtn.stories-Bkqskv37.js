@@ -1,0 +1,6 @@
+import{j as o}from"./jsx-runtime-BjG_zV1W.js";/* empty css              */import{f as i}from"./index-Dr6mi46l.js";const a="_button_1xxim_1",d="_visible_1xxim_18",m="_fadeInFromBottom_1xxim_1",c="_hidden_1xxim_22",u="_fadeOutFromBottom_1xxim_1",r={button:a,visible:d,fadeInFromBottom:m,hidden:c,fadeOutFromBottom:u},n=({onClick:e,visible:s})=>o.jsx("button",{onClick:e,className:`${r.button} ${s?r.visible:r.hidden}`,children:o.jsx(p,{})}),p=()=>o.jsx("svg",{width:"25",height:"24",viewBox:"0 0 25 24",fill:"none",xmlns:"http://www.w3.org/2000/svg",children:o.jsx("path",{d:"M18.25 15L12.25 9L6.25 15",stroke:"white",strokeWidth:"2",strokeLinecap:"round",strokeLinejoin:"round"})});n.__docgenInfo={description:"",methods:[],displayName:"BackToTopBtn",props:{onClick:{required:!0,tsType:{name:"signature",type:"function",raw:"() => void",signature:{arguments:[],return:{name:"void"}}},description:""},visible:{required:!0,tsType:{name:"boolean"},description:""}}};const g={component:n,tags:["autodocs"],argTypes:{},args:{onClick:i()}},t={args:{},render:e=>o.jsx(n,{...e})};t.parameters={...t.parameters,docs:{...t.parameters?.docs,source:{originalSource:`{
+  args: {},
+  render: args => {
+    return <BackToTopBtn {...args} />;
+  }
+}`,...t.parameters?.docs?.source}}};const f=["Primary"];export{t as Primary,f as __namedExportsOrder,g as default};
