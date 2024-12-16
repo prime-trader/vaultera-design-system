@@ -1,8 +1,11 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-:root {
+
+body {
+  font-family: 'Inter', sans-serif;
 }
+
 @font-face {
   font-family: 'Gilroy-Regular';
   src: url('./assets/fonts/gilroy/Gilroy-Regular.ttf') format('truetype');

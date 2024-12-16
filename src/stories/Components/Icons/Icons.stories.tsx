@@ -9,7 +9,8 @@ export default {
     },
     docs: {
       toolbar: { showPanel: false }
-    }
+    },
+    backgrounds: { disable: true }
   }
 }
 

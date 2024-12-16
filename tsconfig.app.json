@@ -27,7 +27,8 @@
     "dist",
     "storybook-static",
     "src/assets/icons",
-    "src/Components"
+    "src/Components",
+    "src/stories"
   ],
 
   // fix path import for ts, and setup alias
