@@ -107,6 +107,25 @@ It holds design system for vaultra ui.
 
 5. **Optional**: Add a `.prettierignore` file to exclude files or directories from being formatted.
 
+6. **ICON updates / fetch**
+
+   Update icons submodule
+
+   ```bash
+   git submodule update --init --recursive
+
+   OR
+   
+   git submodule update --remote // update from the remote
+   ```
+
+   build icons naviagte into the icons module:
+   ```bash
+   yarn build or npm run build
+   ```
+
+   do it same after adding new svgs into the icon directory.
+
 ---
 
 ## Additional Notes
