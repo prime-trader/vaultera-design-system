@@ -6,6 +6,7 @@ import path from 'path'
 export default defineConfig({
   plugins: [react()],
   build: {
+    target: 'esnext',
     lib: {
       // Entry point for your library (index.tsx where your components are exported)
       entry: path.resolve(__dirname, 'src/index.tsx'),

@@ -15,7 +15,7 @@ type ButtonProps = {
 }
 // Custum Styling Append clsx
 // Isloader Icons
-const Button: React.FC<ButtonProps> = ({
+const Button = ({
   label,
   onClick,
   disabled = false,
@@ -24,7 +24,7 @@ const Button: React.FC<ButtonProps> = ({
   icon,
   tags,
   type = 'button'
-}) => {
+}:ButtonProps) => {
   return (
     <button
       type={type}
