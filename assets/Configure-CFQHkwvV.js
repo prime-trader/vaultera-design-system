@@ -1,4 +1,4 @@
-import{j as t}from"./jsx-runtime-BjG_zV1W.js";import{useMDXComponents as l}from"./index-ClffxSL2.js";import{ag as n,ah as i,ai as r}from"./chunk-NUUEMKO5-Cr6uRx6U.js";import"./index-D1lroltp.js";import"./iframe-yDix_Y3H.js";import"../sb-preview/runtime.js";import"./react-18-BpbdjY1d.js";import"./index-DnooperI.js";import"./index-DrFu-skq.js";function s(o){const e={h1:"h1",h2:"h2",...l(),...o.components};return t.jsxs(t.Fragment,{children:[t.jsx(n,{title:"Vaultra Design System/Color & Styles"}),`
+import{j as t}from"./jsx-runtime-BjG_zV1W.js";import{useMDXComponents as l}from"./index-ClffxSL2.js";import{ag as n,ah as i,ai as r}from"./chunk-NUUEMKO5-C6_p5Rs7.js";import"./index-D1lroltp.js";import"./iframe-aohfiU6m.js";import"../sb-preview/runtime.js";import"./react-18-BpbdjY1d.js";import"./index-DnooperI.js";import"./index-DrFu-skq.js";function s(o){const e={h1:"h1",h2:"h2",...l(),...o.components};return t.jsxs(t.Fragment,{children:[t.jsx(n,{title:"Vaultra Design System/Color & Styles"}),`
 `,t.jsx(e.h1,{id:"color--styles",children:"Color & Styles"}),`
 `,t.jsx("br",{}),`
 `,t.jsx(e.h2,{id:"system--cta",children:"System & CTA"}),`
