@@ -1,0 +1,6 @@
+import{j as t}from"./jsx-runtime-BjG_zV1W.js";import{useMDXComponents as l}from"./index-ClffxSL2.js";import{ag as n,ah as i,ai as r}from"./chunk-NUUEMKO5-Cr6uRx6U.js";import"./index-D1lroltp.js";import"./iframe-yDix_Y3H.js";import"../sb-preview/runtime.js";import"./react-18-BpbdjY1d.js";import"./index-DnooperI.js";import"./index-DrFu-skq.js";function s(o){const e={h1:"h1",h2:"h2",...l(),...o.components};return t.jsxs(t.Fragment,{children:[t.jsx(n,{title:"Vaultra Design System/Color & Styles"}),`
+`,t.jsx(e.h1,{id:"color--styles",children:"Color & Styles"}),`
+`,t.jsx("br",{}),`
+`,t.jsx(e.h2,{id:"system--cta",children:"System & CTA"}),`
+`,t.jsx("br",{}),`
+`,t.jsxs(i,{children:[t.jsx(r,{title:"System",subtitle:"",colors:{Primary_Color:"#C3F84D",Secondary_Color:"#000000",Text_Color:"#FFFFFF",Forground_Color:"#171616"}}),t.jsx(r,{title:"Primary",subtitle:"",colors:{Default:"#C3F84D",Hover:"#171616",PressBorder__HoverBkg:"#252424"}}),t.jsx(r,{title:"Disabled CTA",subtitle:"",colors:{Disabled_CTA:"#252424"}}),t.jsx(r,{title:"Save CTA",subtitle:"",colors:{Save_CTA:"#D4FF75",Save_CTA_hover:"#E0FF9C"}})]})]})}function h(o={}){const{wrapper:e}={...l(),...o.components};return e?t.jsx(e,{...o,children:t.jsx(s,{...o})}):s(o)}export{h as default};
